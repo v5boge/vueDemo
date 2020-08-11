@@ -4,9 +4,14 @@ import router from './router'
 import store from './store'
 
 Vue.config.productionTip = false
-
+console.log(App);
+var login = {
+  template: '<h1>这是登录组件</h1>'
+}
 new Vue({
+  el:'#app',
   router,
   store,
-  render: function (h) { return h(App) }
-}).$mount('#app')
+  render:h => h(App)
+})
+//.$mount('#app')
